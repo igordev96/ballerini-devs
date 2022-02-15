@@ -1,7 +1,13 @@
+import { GlobalStyle } from "./globalstyles";
+import Home from "./pages/Home";
+import Navbar from "./components/Navbar";
+
 function App() {
   return (
     <>
-      <h1>Hello Balle</h1>
+      <GlobalStyle />
+      <Navbar />
+      <Home />
     </>
   );
 }
