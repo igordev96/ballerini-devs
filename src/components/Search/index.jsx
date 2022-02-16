@@ -5,7 +5,7 @@ export default function Search() {
   return (
     <StyledSearch>
       <div className="inputField">
-        <img src={magnifying} alt="" />
+        <img src={magnifying} alt="lupa" />
         <input type="text" placeholder="Buscar" />
       </div>
 

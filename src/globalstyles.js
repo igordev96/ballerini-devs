@@ -19,6 +19,7 @@ export const GlobalStyle = createGlobalStyle`
     font-family: Overpass, sans-serif;
     height: 100vh;
     width: 100vw;
+    overflow: hidden;
   }
 
   h1 {
@@ -50,5 +51,6 @@ export const GlobalStyle = createGlobalStyle`
 
   ::placeholder {
     color: #999;
+    font-weight: 500;
   }
 `;

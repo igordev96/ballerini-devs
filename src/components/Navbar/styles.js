@@ -9,6 +9,8 @@ export const Logo = styled(motion.div)`
   cursor: pointer;
 
   h3 {
+    font-family: "Maven Pro", sans-serif;
+    font-size: 2rem;
     color: white;
     user-select: none;
   }
@@ -27,6 +29,8 @@ export const Header = styled(motion.header)`
     gap: 1rem;
 
     img {
+      width: 1.5rem;
+      height: 1.5rem;
       cursor: pointer;
     }
   }
