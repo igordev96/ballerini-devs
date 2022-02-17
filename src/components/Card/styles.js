@@ -96,5 +96,7 @@ export const Buttons = styled(motion.div)`
 
 export const Container = styled(motion.div)`
   position: relative;
-  height: 32rem;
+  display: grid;
+  place-items: center;
+  height: 37rem;
 `;
