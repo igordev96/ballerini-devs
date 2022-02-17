@@ -4,6 +4,8 @@ import blob_middle from "../../assets/blob_middle.svg";
 
 import { motion } from "framer-motion";
 
+import { Link } from "react-router-dom";
+
 import { DevelopingGuy, LandingPage, LandingText } from "./styles";
 
 export default function Home() {
@@ -17,12 +19,12 @@ export default function Home() {
           Não importa se front ou back end, fazer networking é muito importante.
           Faça parte da maior comunidade de desenvolvedores brasileiros.
         </h3>
-        <div className="button">
+        <Link to="/devs">
           <motion.button whileHover={{ scale: 1.1 }}>
             Entre Agora
             <motion.div className="line"></motion.div>
           </motion.button>
-        </div>
+        </Link>
       </LandingText>
       <DevelopingGuy>
         <img src={developer} alt="Desenvolvedor programando" />

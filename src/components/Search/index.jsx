@@ -9,7 +9,7 @@ export default function Search() {
         <input type="text" placeholder="Buscar" />
       </div>
 
-      <button>Procurar Desenvolvedor</button>
+      <button>Adicionar Desenvolvedor</button>
     </StyledSearch>
   );
 }

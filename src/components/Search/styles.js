@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import styled from "styled-components";
 
-export const StyledSearch = styled(motion.form)`
+export const StyledSearch = styled(motion.div)`
   display: flex;
   flex-direction: column;
   align-self: flex-end;

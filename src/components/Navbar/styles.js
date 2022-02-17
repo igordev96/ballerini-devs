@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { motion } from "framer-motion";
+import { green } from "../../globalstyles";
 
 export const Logo = styled(motion.div)`
   display: flex;
@@ -7,6 +8,12 @@ export const Logo = styled(motion.div)`
   gap: 1rem;
   margin-right: auto;
   cursor: pointer;
+  transition: 200ms;
+
+  &:hover {
+    filter: drop-shadow(0 0 5px ${green});
+    transform: scale(1.1);
+  }
 
   h3 {
     font-family: "Maven Pro", sans-serif;
@@ -32,6 +39,12 @@ export const Header = styled(motion.header)`
       width: 1.5rem;
       height: 1.5rem;
       cursor: pointer;
+      transition: 200ms;
+
+      &:hover {
+        filter: drop-shadow(0 0 5px ${green});
+        transform: scale(1.2);
+      }
     }
   }
 `;

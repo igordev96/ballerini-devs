@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components";
+import { darken } from "polished";
 
 export const black = "#1d1d1d";
 export const green = "#27ae60";
@@ -43,14 +44,24 @@ export const GlobalStyle = createGlobalStyle`
     border-radius: 55px;
     font-size: 1.5rem;
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
+    transition: 150ms;
 
     &:hover {
       cursor: pointer;
+    }
+
+    &:active {
+      background-color: ${darken(0.1, green)};
     }
   }
 
   ::placeholder {
     color: #999;
     font-weight: 500;
+  }
+
+  img, a {
+    -webkit-user-drag: none;
+    user-select: none;
   }
 `;
