@@ -99,7 +99,13 @@ export default function Modal({
   };
 
   return (
-    <Background onClick={exitModalHandler} className="shadow">
+    <Background
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      onClick={exitModalHandler}
+      className="shadow"
+    >
       <StyledForm>
         <h1>{buttonType == "add" ? "Adicionar" : "Editar"} Desenvolvedor</h1>
         <StyledInput>

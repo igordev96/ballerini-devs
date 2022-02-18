@@ -10,7 +10,11 @@ import { DevelopingGuy, LandingPage, LandingText } from "./styles";
 
 export default function Home() {
   return (
-    <LandingPage>
+    <LandingPage
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+    >
       <img className="blobs middle" src={blob_middle} alt="blobs" />
       <img className="blobs bottom" src={blob_bottom} alt="blobs" />
       <LandingText>

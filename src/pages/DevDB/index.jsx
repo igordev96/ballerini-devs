@@ -24,7 +24,12 @@ export default function DevDB({
   // );
   return (
     <>
-      <Outer ref={carouselRef}>
+      <Outer
+        ref={carouselRef}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+      >
         <Container
           drag="x"
           dragConstraints={carouselRef}

@@ -28,6 +28,9 @@ export default function Card({
   return (
     <>
       <Container
+        initial={{ scale: 0 }}
+        animate={{ scale: 1 }}
+        exit={{ scale: 0 }}
         onMouseEnter={() => setHover(true)}
         onMouseLeave={() => setHover(false)}
       >
