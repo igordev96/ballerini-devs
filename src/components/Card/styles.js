@@ -37,6 +37,8 @@ export const StyledCard = styled(motion.div)`
   .user {
     margin-bottom: 2rem;
     width: 12rem;
+    height: 12rem;
+    object-fit: cover;
     border-radius: 50%;
     border: 4px solid ${green};
   }

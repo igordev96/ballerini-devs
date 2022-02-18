@@ -1,7 +1,7 @@
 import { StyledSearch } from "./styles";
 import magnifying from "../../assets/magnifying.svg";
 
-export default function Search() {
+export default function Search({ setModalToggle }) {
   return (
     <StyledSearch>
       <div className="inputField">
@@ -9,7 +9,9 @@ export default function Search() {
         <input type="text" placeholder="Buscar" />
       </div>
 
-      <button>Adicionar Desenvolvedor</button>
+      <button onClick={() => setModalToggle(true)}>
+        Adicionar Desenvolvedor
+      </button>
     </StyledSearch>
   );
 }

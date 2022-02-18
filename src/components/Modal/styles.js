@@ -11,15 +11,17 @@ export const Background = styled(motion.div)`
   display: grid;
   place-items: center;
   background-color: rgba(0, 0, 0, 0.5);
+  z-index: 3;
 `;
 
 export const StyledForm = styled(motion.form)`
   height: 70vh;
-  padding: 3rem;
+  padding: 2rem 2.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 3rem;
+  justify-content: space-between;
+  border-radius: 10px;
   background-color: rgba(52, 51, 51, 0.95);
 
   h1 {
@@ -32,8 +34,20 @@ export const StyledForm = styled(motion.form)`
 
 export const StyledInput = styled(motion.div)`
   display: flex;
-  width: 60%;
+  width: 90%;
   flex-direction: column;
+  font-family: "Maven Pro", sans-serif;
+  font-size: 1.5rem;
+  color: white;
+
+  input {
+    background-color: white;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    font-size: 1.5rem;
+    padding: 0 1rem;
+    outline: none;
+  }
 `;
 
 export const Buttons = styled(motion.div)`
@@ -42,6 +56,8 @@ export const Buttons = styled(motion.div)`
 
   button {
     font-size: 1.2rem;
+    font-family: "Maven Pro", sans-serif;
+    font-weight: 600;
     color: black;
     padding: 0.5rem 2rem 0.5rem 2rem;
   }

@@ -11,8 +11,14 @@ export default function Card({
   avatar,
   githubLink,
   linkedinLink,
+  devs,
+  setDevs,
 }) {
   const [hover, setHover] = useState(false);
+
+  const deleteDev = () => {
+    setDevs(devs.filter((dev) => dev.id !== id));
+  };
 
   return (
     <Container
@@ -37,7 +43,9 @@ export default function Card({
       {hover && (
         <Buttons>
           <button className="edit">Editar</button>
-          <button className="delete">Deletar</button>
+          <button onClick={deleteDev} className="delete">
+            Deletar
+          </button>
         </Buttons>
       )}
     </Container>

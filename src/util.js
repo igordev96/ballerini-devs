@@ -6,6 +6,7 @@ export default function DevUsers() {
       position: "Front-End Developer",
       github: "https://github.com/igordev96",
       linkedin: "https://www.linkedin.com/in/igordev96/",
+      id: crypto.randomUUID(),
     },
     {
       avatar: "https://avatars.githubusercontent.com/u/2254731?v=4",
@@ -13,6 +14,7 @@ export default function DevUsers() {
       position: "CTO @ RocketSeat",
       github: "https://github.com/diego3g",
       linkedin: "#",
+      id: crypto.randomUUID(),
     },
     {
       avatar: "https://avatars.githubusercontent.com/u/31110235?v=4",
@@ -20,6 +22,7 @@ export default function DevUsers() {
       position: "Developer/Youtuber/Designer",
       github: "https://github.com/developedbyed",
       linkedin: "#",
+      id: crypto.randomUUID(),
     },
     {
       avatar: "https://avatars.githubusercontent.com/u/4248081?v=4",
@@ -27,6 +30,7 @@ export default function DevUsers() {
       position: "Developer / Youtuber",
       github: "https://github.com/filipedeschamps",
       linkedin: "#",
+      id: crypto.randomUUID(),
     },
     {
       avatar: "https://avatars.githubusercontent.com/u/54322854?v=4",
@@ -34,6 +38,7 @@ export default function DevUsers() {
       position: "Desenvolvedora de software",
       github: "https://github.com/rafaballerini",
       linkedin: "#",
+      id: crypto.randomUUID(),
     },
     {
       avatar: "https://avatars.githubusercontent.com/u/55156476?v=4",
@@ -41,6 +46,7 @@ export default function DevUsers() {
       position: "Desenvolvedor de software",
       github: "https://github.com/ARTHURPC03",
       linkedin: "#",
+      id: crypto.randomUUID(),
     },
   ];
 }
