@@ -13,7 +13,7 @@ export default function DevUsers() {
       name: "Diego Fernandes",
       position: "CTO @ RocketSeat",
       github: "https://github.com/diego3g",
-      linkedin: "#",
+      linkedin: "https://www.linkedin.com/in/diego-schell-fernandes/",
       id: crypto.randomUUID(),
     },
     {
@@ -21,7 +21,7 @@ export default function DevUsers() {
       name: "Simo Edwin",
       position: "Developer/Youtuber/Designer",
       github: "https://github.com/developedbyed",
-      linkedin: "#",
+      linkedin: "https://www.linkedin.com/in/simo-edwin-57a25714b/",
       id: crypto.randomUUID(),
     },
     {
@@ -29,7 +29,7 @@ export default function DevUsers() {
       name: "Filipe Deschamps",
       position: "Developer / Youtuber",
       github: "https://github.com/filipedeschamps",
-      linkedin: "#",
+      linkedin: "https://www.linkedin.com/in/filipedeschamps/",
       id: crypto.randomUUID(),
     },
     {
@@ -37,7 +37,7 @@ export default function DevUsers() {
       name: "Rafaella Ballerini",
       position: "Desenvolvedora de software",
       github: "https://github.com/rafaballerini",
-      linkedin: "#",
+      linkedin: "https://www.linkedin.com/in/rafaellaballerini/",
       id: crypto.randomUUID(),
     },
     {
@@ -45,7 +45,7 @@ export default function DevUsers() {
       name: "Arthur Pimentel",
       position: "Desenvolvedor de software",
       github: "https://github.com/ARTHURPC03",
-      linkedin: "#",
+      linkedin: "https://www.linkedin.com/in/arthurpc03/",
       id: crypto.randomUUID(),
     },
   ];

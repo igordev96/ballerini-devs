@@ -25,6 +25,7 @@ export default function Modal({ setModalToggle, setDevs, devs }) {
         position,
         linkedin,
         github,
+        id: crypto.randomUUID(),
       },
     ]);
     setName("");
