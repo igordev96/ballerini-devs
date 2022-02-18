@@ -10,6 +10,10 @@ export const Logo = styled(motion.div)`
   cursor: pointer;
   transition: 200ms;
 
+  @media screen and (max-width: 1200px) {
+    margin-right: 0;
+  }
+
   &:hover {
     filter: drop-shadow(0 0 5px ${green});
     transform: scale(1.1);
@@ -29,11 +33,20 @@ export const Header = styled(motion.header)`
   align-items: center;
   justify-content: center;
 
+  @media screen and (max-width: 1200px) {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
   nav {
     margin-right: auto;
     display: flex;
     align-items: center;
     gap: 1rem;
+
+    @media screen and (max-width: 1200px) {
+      margin-right: 0;
+    }
 
     img {
       width: 1.5rem;

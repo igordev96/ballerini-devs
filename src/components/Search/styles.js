@@ -8,6 +8,10 @@ export const StyledSearch = styled(motion.div)`
   height: 3rem;
   gap: 2rem;
 
+  @media screen and (max-width: 1200px) {
+    align-self: auto;
+  }
+
   button {
     width: 75%;
     padding-left: 2rem;
@@ -15,6 +19,10 @@ export const StyledSearch = styled(motion.div)`
     align-self: flex-end;
     font-size: 1rem;
     font-family: "Maven Pro", sans-serif;
+
+    @media screen and (max-width: 1200px) {
+      align-self: center;
+    }
   }
 
   .inputField {

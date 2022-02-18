@@ -3,6 +3,10 @@ import styled from "styled-components";
 import { green } from "../../globalstyles";
 
 export const LandingText = styled(motion.section)`
+  @media screen and (max-width: 1200px) {
+    margin-top: 5rem;
+  }
+
   h1 {
     margin-bottom: 1.5rem;
   }
@@ -32,9 +36,17 @@ export const LandingPage = styled(motion.main)`
   padding: 3rem 6rem;
   overflow-y: hidden;
 
+  @media screen and (max-width: 1200px) {
+    flex-direction: column;
+  }
+
   .blobs {
     position: absolute;
     z-index: -2;
+
+    @media screen and (max-width: 1200px) {
+      display: none;
+    }
   }
 
   .middle {
@@ -51,4 +63,13 @@ export const LandingPage = styled(motion.main)`
 
 export const DevelopingGuy = styled(motion.figure)`
   margin-right: -4rem;
+
+  @media screen and (max-width: 1200px) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    opacity: 0.2;
+    transform: translate(-50%, -50%);
+    z-index: -2;
+  }
 `;
