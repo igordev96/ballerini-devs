@@ -1,8 +1,16 @@
 import Card from "../../components/Card";
 import { Container, Outer } from "./styles";
 import { useCallback, useRef, useState } from "react";
+import Modal from "../../components/Modal";
 
-export default function DevDB({ devs, setDevs }) {
+export default function DevDB({
+  devs,
+  setDevs,
+  setButtonType,
+  setModalToggle,
+  setEditId,
+  deleteRef,
+}) {
   const [width, setWidth] = useState(0);
   const carouselRef = useRef();
 
@@ -24,6 +32,9 @@ export default function DevDB({ devs, setDevs }) {
         >
           {devs.map((dev) => (
             <Card
+              deleteRef={deleteRef}
+              setEditId={setEditId}
+              setButtonType={setButtonType}
               setDevs={setDevs}
               devs={devs}
               key={dev.id}
@@ -33,6 +44,7 @@ export default function DevDB({ devs, setDevs }) {
               position={dev.position}
               githubLink={dev.github}
               linkedinLink={dev.linkedin}
+              setModalToggle={setModalToggle}
             />
           ))}
         </Container>

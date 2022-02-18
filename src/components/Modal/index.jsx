@@ -1,22 +1,55 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Background, StyledForm, StyledInput, Buttons } from "./styles";
 
-export default function Modal({ setModalToggle, setDevs, devs }) {
+export default function Modal({
+  setModalToggle,
+  setDevs,
+  devs,
+  buttonType,
+  editId = 0,
+}) {
+  const [temp, setTemp] = useState([]);
   const [name, setName] = useState("");
   const [avatar, setAvatar] = useState("");
   const [position, setPosition] = useState("");
   const [linkedin, setLinkedin] = useState("");
   const [github, setGithub] = useState("");
 
+  useEffect(() => {
+    setTemp(devs.filter((dev) => dev.id === editId));
+  }, [editId]);
+
+  useEffect(() => {
+    setName(temp[0] ? temp[0].name : "");
+    setAvatar(temp[0] ? temp[0].avatar : "");
+    setLinkedin(temp[0] ? temp[0].linkedin : "");
+    setGithub(temp[0] ? temp[0].github : "");
+    setPosition(temp[0] ? temp[0].position : "");
+  }, [temp]);
+
   const exitModalHandler = (e) => {
     const elem = e.target;
     if (elem.classList.contains("shadow")) {
+      setName("");
+      setAvatar("");
+      setLinkedin("");
+      setGithub("");
+      setPosition("");
+      setTemp([]);
       setModalToggle(false);
     }
   };
 
   const addDev = (e) => {
     e.preventDefault();
+    if (
+      name.trim() === "" ||
+      avatar.trim() === "" ||
+      position.trim() === "" ||
+      linkedin.trim() === "" ||
+      github.trim() === ""
+    )
+      return;
     setDevs([
       ...devs,
       {
@@ -36,10 +69,39 @@ export default function Modal({ setModalToggle, setDevs, devs }) {
     setModalToggle(false);
   };
 
+  const editDev = (e) => {
+    e.preventDefault();
+    if (
+      name.trim() === "" ||
+      avatar.trim() === "" ||
+      position.trim() === "" ||
+      linkedin.trim() === "" ||
+      github.trim() === ""
+    )
+      return;
+    const tempDevs = [...devs];
+    tempDevs.forEach((tempDev) => {
+      if (tempDev.id === editId) {
+        tempDev.name = name;
+        tempDev.avatar = avatar;
+        tempDev.github = github;
+        tempDev.position = position;
+        tempDev.linkedin = linkedin;
+      }
+    });
+    setDevs([...tempDevs]);
+    setName("");
+    setAvatar("");
+    setLinkedin("");
+    setGithub("");
+    setPosition("");
+    setModalToggle(false);
+  };
+
   return (
     <Background onClick={exitModalHandler} className="shadow">
       <StyledForm>
-        <h1>Adicionar Desenvolvedor</h1>
+        <h1>{buttonType == "add" ? "Adicionar" : "Editar"} Desenvolvedor</h1>
         <StyledInput>
           <label htmlFor="name">Nome:</label>
           <input
@@ -49,7 +111,7 @@ export default function Modal({ setModalToggle, setDevs, devs }) {
             value={name}
             type="text"
             id="name"
-            required
+            aria-required
           />
         </StyledInput>
         <StyledInput>
@@ -109,8 +171,11 @@ export default function Modal({ setModalToggle, setDevs, devs }) {
           >
             Cancelar
           </button>
-          <button onClick={addDev} className="add">
-            Adicionar
+          <button
+            onClick={buttonType == "add" ? addDev : editDev}
+            className={buttonType == "add" ? "add" : "edit"}
+          >
+            {buttonType == "add" ? "Adicionar" : "Editar"}
           </button>
         </Buttons>
       </StyledForm>

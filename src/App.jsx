@@ -4,17 +4,46 @@ import Navbar from "./components/Navbar";
 import DevDB from "./pages/DevDB";
 import { Routes, Route } from "react-router-dom";
 import DevUsers from "./util";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 function App() {
   const [devs, setDevs] = useState(DevUsers());
+  const [editId, setEditId] = useState(0);
+  const [filteredDevs, setFilteredDevs] = useState([...devs]);
+  const [buttonType, setButtonType] = useState("add");
+  const [modalToggle, setModalToggle] = useState(false);
+  const deleteRef = useRef();
+
   return (
     <>
       <GlobalStyle />
-      <Navbar setDevs={setDevs} devs={devs} />
+      <Navbar
+        deleteRef={deleteRef}
+        editId={editId}
+        setButtonType={setButtonType}
+        buttonType={buttonType}
+        setFilteredDevs={setFilteredDevs}
+        setDevs={setDevs}
+        devs={devs}
+        modalToggle={modalToggle}
+        setModalToggle={setModalToggle}
+      />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/devs" element={<DevDB devs={devs} setDevs={setDevs} />} />
+        <Route
+          path="/devs"
+          element={
+            <DevDB
+              deleteRef={deleteRef}
+              setEditId={setEditId}
+              setButtonType={setButtonType}
+              devs={devs}
+              setDevs={setDevs}
+              modalToggle={modalToggle}
+              setModalToggle={setModalToggle}
+            />
+          }
+        />
       </Routes>
     </>
   );

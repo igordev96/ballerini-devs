@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { darken } from "polished";
 import styled from "styled-components";
+import { yellow } from "../../globalstyles";
 
 export const Background = styled(motion.div)`
   position: absolute;
@@ -11,7 +12,7 @@ export const Background = styled(motion.div)`
   display: grid;
   place-items: center;
   background-color: rgba(0, 0, 0, 0.5);
-  z-index: 3;
+  z-index: 10;
 `;
 
 export const StyledForm = styled(motion.form)`
@@ -60,6 +61,14 @@ export const Buttons = styled(motion.div)`
     font-weight: 600;
     color: black;
     padding: 0.5rem 2rem 0.5rem 2rem;
+  }
+
+  .edit {
+    background-color: ${yellow};
+
+    &:active {
+      background-color: ${darken(0.1, yellow)};
+    }
   }
 
   .cancel {
